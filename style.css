@@ -1,0 +1,36 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif; }
+body { background:#050510; color:white; text-align:center; overflow-x:hidden; }
+
+/* HERO */
+.hero { position:relative; height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; overflow:hidden; }
+#cityCanvas { position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; }
+.neon-title { font-size:3.5rem; color:#0ff; text-shadow:0 0 15px #0ff,0 0 40px #f0f,0 0 70px #ff0; z-index:1; animation: float 4s ease-in-out infinite; }
+@keyframes float {0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+.subtitle { color:#aaa; margin:10px 0; z-index:1; font-size:1.3rem; }
+
+/* BUTTON */
+.neon-btn { padding:14px 32px; border:2px solid #0ff; background:transparent; color:#0ff; cursor:pointer; margin-top:20px; box-shadow:0 0 15px #0ff,0 0 40px #f0f,0 0 70px #ff0; transition:0.3s; z-index:1;}
+.neon-btn:hover{ background:#0ff; color:#050510; box-shadow:0 0 25px #0ff,0 0 50px #f0f,0 0 80px #ff0;}
+
+/* SECTIONS */
+section { padding:80px 20px; }
+.section-title { font-size:2rem; color:#0ff; margin-bottom:20px; text-shadow:0 0 10px #0ff,0 0 20px #f0f,0 0 30px #ff0; }
+
+/* PROJECTS */
+.project-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:20px; max-width:900px; margin:auto;}
+.project-card { padding:30px; border:1px solid #0ff; box-shadow:0 0 20px #0ff,0 0 40px #f0f,0 0 60px #ff0; transition: transform 0.3s;}
+.project-card:hover { transform:translateY(-10px) scale(1.05); }
+
+/* CONTACT FORM */
+form { max-width:450px; margin:auto; display:flex; flex-direction:column; gap:15px; }
+input,textarea{padding:12px; background:#000; border:1px solid #0ff; color:#0ff; outline:none;}
+
+/* FOOTER */
+footer { padding:20px; background:#000; color:#aaa; }
+
+/* CHATBOT */
+#chatbot { position:fixed; bottom:70px; right:20px; width:300px; max-height:400px; background:#111; border:2px solid #0ff; display:none; flex-direction:column; }
+#chatbot-header { background:#0ff; color:#050510; padding:10px; font-weight:bold; }
+#chatbot-messages { flex:1; overflow-y:auto; padding:10px; }
+#chatbot-input { padding:10px; border:none; outline:none; }
+#chatbot-toggle { position:fixed; bottom:20px; right:20px; padding:15px; border:none; border-radius:50%; background:#0ff; color:#050510; font-size:1.5rem; cursor:pointer; box-shadow:0 0 20px #0ff;}
